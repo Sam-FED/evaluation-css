@@ -27,6 +27,11 @@ main{
             display: flex;
             flex-direction: column;
         }
+        .politics{
+            h1{
+                font-size: 24px;
+            }
+        }
     }
     @media (min-width: 780px){
         display: grid;
@@ -43,10 +48,14 @@ main{
                     display: flex;
                     justify-content: space-between;
                 }
+                h1{
+                    font-size: 48px;
+                    font-weight: 400;
+                }
             }
             .todays-most-popular{
-                display: grid;
-                grid-template-rows: 3;
+                display: flex;
+                flex-direction: column;
                 .box-most-popular{
                     display: grid;
                     grid-template-columns: 1fr 2fr;
@@ -78,6 +87,7 @@ main{
         line-height: 1.8rem;
         margin-bottom: 26px;
     }
+    
     span{
         color:  #9f9f9f;
         font-size: 16px;
@@ -148,6 +158,7 @@ h1{
     }
 }
 // most popular
+
 .box-most-popular{
     margin-top: 40px;
 }
@@ -190,13 +201,15 @@ h1{
 .top-news-right-title{
     border-bottom: 1px solid;
     border-color: lightgrey;
-    height: 3rem;
+    // height: 3rem;
     width: 100%;
     margin-bottom: 2rem;
+    margin-top: 0px;
     h2{
         font-size: 18px;
         font-weight: normal;
         text-transform: uppercase;
+        // line-height: 0;
     }
 }
 .image-zoom {
@@ -216,7 +229,8 @@ h1{
 .breaking-news{
     display: flex;
     flex-direction: column;
-    margin-top: -15px;
+    // margin-top: -15px;
+    
 }
 .box-breaking-news{
     margin-bottom: 10px;
@@ -263,6 +277,8 @@ h1{
 // don't miss
 
 .dont-miss{
+
+
     .box-dont-miss{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -283,6 +299,82 @@ h1{
         }
     }
 }
+
+// advert
+.advert{
+    h2{
+        margin-top: -20px;
+    }
+}
+
+// small news
+
+.small-news{
+    margin-bottom: 100px;
+    @media (min-width: 780px){
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        width: 58%;
+        gap: 1rem;
+        .big-box-small-news-left{
+        grid-column: 1 /span 2;
+        grid-row: 1 / spann 2;
+        }
+        .big-box-small-news-right{
+        grid-column: 5 /span 2;
+        grid-row: 1 / spann 2;
+        }  
+    }
+    @media (max-width: 780px){
+        width: ;
+    }
+    
+}
+
+// videos
+a{
+    text-decoration: none;
+    color: #1e1e1e;
+}
+h5{
+    font-size: 18px;
+    font-weight: 400;
+}
+.article-video{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .svg-a{
+        width: 15px;
+        height: 15px;
+    }
+    svg{
+        position: absolute;
+        top: 35%;
+        left: 50%; 
+        transform: translate(-50%, -50%);
+        fill: white;
+    }
+}
+.articles-videos{
+    @media (min-width: 780px){
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 58%;
+        gap: 1rem;
+    }
+    @media (max-width:780px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+    }
+}
+
+
+
+
 
 
 
