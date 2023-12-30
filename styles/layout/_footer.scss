@@ -3,6 +3,7 @@ footer{
     position: relative;
     z-index: 2;
     width: 100%;
+    height: fit-content;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -14,9 +15,13 @@ footer{
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 50px;
+    .copyright{
+        font-size: 12px;
+        height: 80px;
+    }
     
     @media (min-width:780px){
-        height: 70vh;
+        
         
     }
     @media (max-width: 780px){
@@ -26,7 +31,21 @@ footer{
             flex-direction: column;
             justify-content: center;
             align-items: start;
-            height: 200vh;
+            height: fit-content;
+            width: 95%;
+            margin-bottom: 100px;
+        }
+        .copyright{
+            font-size: 12px;
+            text-align: center;
+            p{
+                width: 80%;
+                line-height: 20px;
+                svg{
+                    width: 12px;
+                    vertical-align: middle;
+                }
+            }
         }
 
     }
@@ -55,6 +74,11 @@ footer::before{
         margin-bottom: 10px;
         font-size: 16px;
         font-weight: lighter;
+        &:hover {
+            transition: all 500ms ease 0s;
+            translate: 5px;
+            color: white;
+        }
     }
     h6{
         color: white;

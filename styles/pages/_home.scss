@@ -65,11 +65,7 @@ main{
         }
         .top-news-right{
             width: 250px;
-                .breaking-news{
-                    img{
-                        // height: 268px;
-                    }
-                }
+                
             }
     }
     
@@ -201,7 +197,6 @@ h1{
 .top-news-right-title{
     border-bottom: 1px solid;
     border-color: lightgrey;
-    // height: 3rem;
     width: 100%;
     margin-bottom: 2rem;
     margin-top: 0px;
@@ -209,7 +204,6 @@ h1{
         font-size: 18px;
         font-weight: normal;
         text-transform: uppercase;
-        // line-height: 0;
     }
 }
 .image-zoom {
@@ -311,6 +305,22 @@ h1{
 
 .small-news{
     margin-bottom: 100px;
+    font-family: 'PT Serif', serif;
+    font-size: 20px;
+    .red-title-button{
+        margin-top: 20px;
+        font-family: roboto;
+    }
+    .big-box-small-news{
+        .small-title-date{
+            border-bottom: 1px solid;
+            border-color: lightgray;
+        }
+    }
+    .small-title-date{
+        line-height: 30px;
+        padding: 14px 0;
+    }
     @media (min-width: 780px){
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -326,7 +336,12 @@ h1{
         }  
     }
     @media (max-width: 780px){
-        width: ;
+        width: 95%;
+        .small-title-date{
+            display: flex;
+            flex-direction: column;
+        }
+        
     }
     
 }
@@ -350,12 +365,32 @@ h5{
     }
     svg{
         position: absolute;
-        top: 35%;
+        top: 50%;
         left: 50%; 
         transform: translate(-50%, -50%);
         fill: white;
+        z-index: 5;
+    }
+    
+}
+.opacity{
+    position: relative;
+    z-index: 1;
+    &:hover::after{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.85);
+        content: '';
+        z-index: 1;
+        opacity: .85;
+        transition-duration: 500ms;
     }
 }
+
+
 .articles-videos{
     @media (min-width: 780px){
         display: grid;
